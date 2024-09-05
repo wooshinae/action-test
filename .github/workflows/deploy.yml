@@ -1,0 +1,20 @@
+name: Test Self-hosted Runner
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run build
+        run: echo "Running build on self-hosted runner"
