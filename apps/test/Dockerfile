@@ -35,4 +35,4 @@ COPY --from=installer /app/apps/test/package.json .
 COPY --from=installer --chown=nextjs:nodejs /app/apps/test/.next/standalone ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/test/.next/static ./apps/test/.next/static
 
-CMD node ./apps/test/server.js
+CMD ["node", "./apps/test/server.js"]
